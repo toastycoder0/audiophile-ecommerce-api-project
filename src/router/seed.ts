@@ -12,6 +12,8 @@ router.post('/', async (_, res) => {
     return res.status(500).json({ message: 'This action cannot be performed in a production environment.' })
   }
 
+  await db.product.deleteMany()
+
   await db.product.createMany({ data })
 
   res.status(200).json({ message: 'Data created' })
