@@ -1,6 +1,8 @@
 name: CI/CD Pipeline
 
 on:
+  workflow_dispatch:
+
   push:
     branches:
       - main
@@ -83,8 +85,7 @@ jobs:
       - name: Compile TypeScript
         run: pnpm run build
 
-      - name: Deploy to Railway
+      - name: Deploy
+        run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
-        run: pnpm exec railway up --project $RAILWAY_PROJECT_ID
