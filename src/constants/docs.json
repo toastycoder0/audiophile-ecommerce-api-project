@@ -1,0 +1,382 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Product API",
+    "version": "1.0.0",
+    "description": "API documentation for product endpoints"
+  },
+  "paths": {
+    "/api/product": {
+      "get": {
+        "summary": "Retrieve a list of products",
+        "description": "Retrieve a list of products, optionally filtered by category.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "category",
+            "schema": {
+              "type": "string"
+            },
+            "description": "The category of products to filter by"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of products",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "products": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "category": {
+                            "type": "string"
+                          },
+                          "categoryImage": {
+                            "type": "object",
+                            "properties": {
+                              "desktop": {
+                                "type": "string"
+                              },
+                              "mobile": {
+                                "type": "string"
+                              },
+                              "tablet": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "features": {
+                            "type": "string"
+                          },
+                          "gallery": {
+                            "type": "object",
+                            "properties": {
+                              "first": {
+                                "type": "object",
+                                "properties": {
+                                  "desktop": {
+                                    "type": "string"
+                                  },
+                                  "mobile": {
+                                    "type": "string"
+                                  },
+                                  "tablet": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "second": {
+                                "type": "object",
+                                "properties": {
+                                  "desktop": {
+                                    "type": "string"
+                                  },
+                                  "mobile": {
+                                    "type": "string"
+                                  },
+                                  "tablet": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "third": {
+                                "type": "object",
+                                "properties": {
+                                  "desktop": {
+                                    "type": "string"
+                                  },
+                                  "mobile": {
+                                    "type": "string"
+                                  },
+                                  "tablet": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "image": {
+                            "type": "object",
+                            "properties": {
+                              "desktop": {
+                                "type": "string"
+                              },
+                              "mobile": {
+                                "type": "string"
+                              },
+                              "tablet": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "includes": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "item": {
+                                  "type": "string"
+                                },
+                                "quantity": {
+                                  "type": "number"
+                                }
+                              }
+                            }
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "new": {
+                            "type": "boolean"
+                          },
+                          "others": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "image": {
+                                  "type": "object",
+                                  "properties": {
+                                    "desktop": {
+                                      "type": "string"
+                                    },
+                                    "mobile": {
+                                      "type": "string"
+                                    },
+                                    "tablet": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "slug": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "price": {
+                            "type": "number"
+                          },
+                          "slug": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/product/{slug}": {
+      "get": {
+        "summary": "Retrieve a product by slug",
+        "description": "Retrieve a single product by its slug.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The slug of the product to retrieve"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A product",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "product": {
+                      "type": "object",
+                      "properties": {
+                        "category": {
+                          "type": "string"
+                        },
+                        "categoryImage": {
+                          "type": "object",
+                          "properties": {
+                            "desktop": {
+                              "type": "string"
+                            },
+                            "mobile": {
+                              "type": "string"
+                            },
+                            "tablet": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "features": {
+                          "type": "string"
+                        },
+                        "gallery": {
+                          "type": "object",
+                          "properties": {
+                            "first": {
+                              "type": "object",
+                              "properties": {
+                                "desktop": {
+                                  "type": "string"
+                                },
+                                "mobile": {
+                                  "type": "string"
+                                },
+                                "tablet": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "second": {
+                              "type": "object",
+                              "properties": {
+                                "desktop": {
+                                  "type": "string"
+                                },
+                                "mobile": {
+                                  "type": "string"
+                                },
+                                "tablet": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "third": {
+                              "type": "object",
+                              "properties": {
+                                "desktop": {
+                                  "type": "string"
+                                },
+                                "mobile": {
+                                  "type": "string"
+                                },
+                                "tablet": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "id": {
+                          "type": "string"
+                        },
+                        "image": {
+                          "type": "object",
+                          "properties": {
+                            "desktop": {
+                              "type": "string"
+                            },
+                            "mobile": {
+                              "type": "string"
+                            },
+                            "tablet": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "includes": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "item": {
+                                "type": "string"
+                              },
+                              "quantity": {
+                                "type": "number"
+                              }
+                            }
+                          }
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "new": {
+                          "type": "boolean"
+                        },
+                        "others": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "image": {
+                                "type": "object",
+                                "properties": {
+                                  "desktop": {
+                                    "type": "string"
+                                  },
+                                  "mobile": {
+                                    "type": "string"
+                                  },
+                                  "tablet": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "slug": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "price": {
+                          "type": "number"
+                        },
+                        "slug": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Product not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Product not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
