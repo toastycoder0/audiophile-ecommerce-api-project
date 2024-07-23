@@ -1,3 +1,4 @@
+import type { Product } from '@prisma/client'
 import request from 'supertest'
 import { app } from '../server'
 import prisma from '../db'
@@ -35,6 +36,9 @@ describe('Product API', () => {
     expect(res.body).toHaveProperty('products')
     expect(res.body.products).toBeInstanceOf(Array)
     expect(res.body.products).not.toHaveLength(0)
+    res.body.products.forEach((product: Product) => {
+      expect(product.category).toBe(category)
+    })
   })
 
   it('should fetch a product by slug', async () => {
@@ -45,6 +49,7 @@ describe('Product API', () => {
 
     expect(res.status).toBe(200)
     expect(res.body).toHaveProperty('product')
+    expect(res.body.product.slug).toBe(slug)
   })
 
   it('should return 404 for a non-existing product', async () => {
