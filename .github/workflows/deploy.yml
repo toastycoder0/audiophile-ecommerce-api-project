@@ -25,9 +25,6 @@ jobs:
           version: 8
           run_install: true
 
-      - name: Install dependencies
-        run: pnpm install
-
       - name: Run lint
         run: pnpm run lint
 
@@ -48,12 +45,6 @@ jobs:
         with:
           version: 8
           run_install: true
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Compile TypeScript
-        run: pnpm run build
 
       - name: Run tests
         run: pnpm test
@@ -76,14 +67,8 @@ jobs:
           version: 8
           run_install: true
 
-      - name: Install dependencies
-        run: pnpm install
-
       - name: Install Railway CLI
         run: pnpm add -g @railway/cli
-
-      - name: Compile TypeScript
-        run: pnpm run build
 
       - name: Deploy
         run: railway up --service ${{ secrets.RAILWAY_SERVICE }}
