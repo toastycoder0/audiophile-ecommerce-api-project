@@ -67,8 +67,8 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       standard:
-        specifier: ^17.1.0
-        version: 17.1.0(@typescript-eslint/parser@8.3.0(eslint@8.57.0)(typescript@5.5.4))
+        specifier: ^17.1.2
+        version: 17.1.2(@typescript-eslint/parser@8.3.0(eslint@8.57.0)(typescript@5.5.4))
       supertest:
         specifier: ^7.0.0
         version: 7.0.0
@@ -1152,8 +1152,8 @@ packages:
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
 
-  eslint-plugin-react@7.35.0:
-    resolution: {integrity: sha512-v501SSMOWv8gerHkk+IIQBkcGRGrO2nfybfj5pLxuJNFTPxxA3PSryhXTK+9pNbtkggheDdsC0E9Q8CuPk6JKA==}
+  eslint-plugin-react@7.37.0:
+    resolution: {integrity: sha512-IHBePmfWH5lKhJnJ7WB1V+v/GolbB0rjS8XYVCSQCZKaQCAUhMoVoOEn1Ef8Z8Wf0a7l8KTJvuZg5/e4qrZ6nA==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
@@ -2296,8 +2296,8 @@ packages:
     resolution: {integrity: sha512-VHysfoyxFu/ukT+9v49d4BRXIokFRZuH3z1VRxzFArZdjSCFpro6rEIU3ji7e4AoAtuSfKBkiOmsrDqKW5ZSRw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  standard@17.1.0:
-    resolution: {integrity: sha512-jaDqlNSzLtWYW4lvQmU0EnxWMUGQiwHasZl5ZEIwx3S/ijZDjZOzs1y1QqKwKs5vqnFpGtizo4NOYX2s0Voq/g==}
+  standard@17.1.2:
+    resolution: {integrity: sha512-WLm12WoXveKkvnPnPnaFUUHuOB2cUdAsJ4AiGHL2G0UNMrcRAWY2WriQaV8IQ3oRmYr0AWUbLNr94ekYFAHOrA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     hasBin: true
 
@@ -3899,10 +3899,10 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-standard-jsx@11.0.0(eslint-plugin-react@7.35.0(eslint@8.57.0))(eslint@8.57.0):
+  eslint-config-standard-jsx@11.0.0(eslint-plugin-react@7.37.0(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       eslint: 8.57.0
-      eslint-plugin-react: 7.35.0(eslint@8.57.0)
+      eslint-plugin-react: 7.37.0(eslint@8.57.0)
 
   eslint-config-standard@17.1.0(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.3.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0))(eslint-plugin-n@15.7.0(eslint@8.57.0))(eslint-plugin-promise@6.6.0(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
@@ -3988,7 +3988,7 @@ snapshots:
     dependencies:
       eslint: 8.57.0
 
-  eslint-plugin-react@7.35.0(eslint@8.57.0):
+  eslint-plugin-react@7.37.0(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlast: 1.2.5
@@ -5383,15 +5383,15 @@ snapshots:
       pkg-conf: 3.1.0
       xdg-basedir: 4.0.0
 
-  standard@17.1.0(@typescript-eslint/parser@8.3.0(eslint@8.57.0)(typescript@5.5.4)):
+  standard@17.1.2(@typescript-eslint/parser@8.3.0(eslint@8.57.0)(typescript@5.5.4)):
     dependencies:
       eslint: 8.57.0
       eslint-config-standard: 17.1.0(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.3.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0))(eslint-plugin-n@15.7.0(eslint@8.57.0))(eslint-plugin-promise@6.6.0(eslint@8.57.0))(eslint@8.57.0)
-      eslint-config-standard-jsx: 11.0.0(eslint-plugin-react@7.35.0(eslint@8.57.0))(eslint@8.57.0)
+      eslint-config-standard-jsx: 11.0.0(eslint-plugin-react@7.37.0(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@8.3.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)
       eslint-plugin-n: 15.7.0(eslint@8.57.0)
       eslint-plugin-promise: 6.6.0(eslint@8.57.0)
-      eslint-plugin-react: 7.35.0(eslint@8.57.0)
+      eslint-plugin-react: 7.37.0(eslint@8.57.0)
       standard-engine: 15.1.0
       version-guard: 1.1.2
     transitivePeerDependencies:
